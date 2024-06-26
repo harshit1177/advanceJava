@@ -1,25 +1,17 @@
 package com.java.collections;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-
-
-
-
-
 
         ArrayList<Integer> noList = new ArrayList();
         noList.add(10);
         noList.add(11);
         noList.add(12);
         noList.add(12);
-        System.out.println(noList);
+
         
         String abc = "names2";
         abc.length();
@@ -35,10 +27,6 @@ public class Main {
         for(int i =0 ;i<noList.size();i++){
             System.out.println(noList.get(i));
         }
-
-
-
-
 
     }
 }
