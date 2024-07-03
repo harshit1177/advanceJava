@@ -18,16 +18,22 @@ public class JDBCDemo {
 
      //   String query = "insert into employee values(110, 'dummy','abc','India')";
 
-          String query = "select * from employee";
+        //  String query = "select * from employee where empid = 109";
 
         // Obtain a statement
         Statement st = con.createStatement();
 
+        int empIds = 109;
+        PreparedStatement preparedStatement = con.prepareStatement("select * from employee where empid = ?");
+        preparedStatement.setInt(1,empIds);
+
         // Execute the query
       //  int count = st.executeUpdate(query);
 
-        ResultSet resultSet = st.executeQuery(query);
+        ResultSet resultSet = preparedStatement.executeQuery();
 
+        System.out.println(resultSet);
+        System.out.println(resultSet.getInt("empid"));
 
         while (resultSet.next()) {
             // Process each row
