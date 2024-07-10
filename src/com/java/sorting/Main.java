@@ -26,7 +26,19 @@ public class Main {
 		System.out.println("sorted array ASC--> " +Arrays.toString(insertionSort.peformInsertionSortAsc(arr)));
 		System.out.println("sorted array DESC--> " +Arrays.toString(insertionSort.peformInsertionSortDesc(arr)));
 
-	    
+		MergeSort mergeSort = new MergeSort();
+		System.out.println();
+		System.out.println("Merge Sort");
+		System.out.println("sorted array ASC--> " +Arrays.toString(mergeSort.performMergeSortAsc(arr)));
+		System.out.println("sorted array DESC--> " +Arrays.toString(mergeSort.performMergeSortDesc(arr)));
+
+		QuickSort quickSort = new QuickSort();
+		QuickSortDesc quickSortDesc = new QuickSortDesc();
+		System.out.println();
+		System.out.println("Quick Sort");
+		System.out.println("sorted array ASC--> " +Arrays.toString(quickSort.performQuickSortASC(arr,0,arr.length-1)));
+		System.out.println("sorted array DESC--> " +Arrays.toString(quickSortDesc.performQuickSortDesc(arr,0,arr.length-1)));
+
 	}
 
 }
